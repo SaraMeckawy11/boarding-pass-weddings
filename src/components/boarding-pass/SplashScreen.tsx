@@ -46,8 +46,7 @@ const SplashScreen = ({ onDismiss }: SplashScreenProps) => {
 
   return (
     <AnimatePresence>
-      {!dismissed ? (
-        <motion.div
+        <motion.div key="splash"
           className="fixed inset-0 z-[9999] cursor-pointer overflow-hidden"
           onClick={handleClick}
           style={{ background: "linear-gradient(180deg, #04060d 0%, #080c18 100%)" }}
@@ -158,7 +157,6 @@ const SplashScreen = ({ onDismiss }: SplashScreenProps) => {
             </motion.p>
           )}
         </motion.div>
-      ) : null}
     </AnimatePresence>
   );
 };
